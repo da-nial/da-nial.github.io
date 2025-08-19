@@ -1,0 +1,200 @@
+/* ===========================
+   Local Persian font (Far Mitra)
+   Put Far_Mitra.ttf next to index.html and this file.
+   =========================== */
+@font-face {
+    font-family: 'FarMitra';
+    src: url('../fonts/Far_Mitra.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===========================
+   Name (two lines: EN then FA)
+   =========================== */
+header {
+    margin: 24px 0 10px;
+}
+
+header h1.name-en {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+header .name-fa {
+    font-family: 'FarMitra', serif;
+    font-size: 24px;
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.9);
+    direction: rtl;
+    unicode-bidi: isolate;
+    margin: 0 0 12px;
+    text-align: center; /* change to right if preferred */
+}
+
+/* ===========================
+   Contacts — simple inline with dividers
+   =========================== */
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.84);
+    margin: 4px 0 0;
+}
+
+.contacts a {
+    color: #000099;
+    text-decoration: none;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+.contacts .divider {
+    color: rgba(0, 0, 0, 0.35);
+    padding: 0 4px;
+}
+
+/* ===========================
+   About — justify only these paragraphs
+   =========================== */
+.about-para {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    /* Avoid odd spacing before punctuation by collapsing whitespace */
+    word-spacing: normal;
+}
+
+/* Keep the rest of the site left-aligned by default */
+body, .content, p:not(.about-para), li {
+    text-align: left !important;
+}
+
+/* Inline list helper if needed */
+ul.inline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.inline li {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 4px 0;
+}
+
+/* ===========================
+   Publications — cleaner, Behrad-like styling
+   =========================== */
+.pub {
+    margin: 0 0 16px;
+}
+
+.pub-title {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.pub-title a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
+}
+
+.pub-title a:hover {
+    text-decoration: none;
+    border-bottom-color: rgba(70, 130, 180, 0.7);
+}
+
+.pub-meta {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 2px 0 0;
+}
+
+.pub-authors {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+    margin: 2px 0 0;
+}
+
+.pub-authors strong {
+    font-weight: 700;
+}
+
+/* subtle emphasis on your name */
+.note {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.65);
+    margin-left: 6px;
+}
+
+.muted {
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 6px;
+}
+
+/* ===========================
+   Experience & Teaching lists
+   =========================== */
+ul.experience {
+    list-style: disc;
+    padding-left: 18px;
+}
+
+.teaching-block {
+    margin: 0 0 8px;
+}
+
+.teaching-inst {
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.teaching-list {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 0 0 8px;
+}
+
+/* ===========================
+   Narrow screens
+   =========================== */
+@media (max-width: 420px) {
+    header h1.name-en {
+        font-size: 26px;
+    }
+
+    header .name-fa {
+        font-size: 22px;
+    }
+
+    .contacts {
+        font-size: 13px;
+        gap: 6px;
+    }
+
+    .pub-authors, .pub-meta {
+        font-size: 13px;
+    }
+}
+
+/* Legacy helper */
+.redirection {
+    text-align: center;
+    background-color: #ffd3d3;
+    padding: 10px 12px;
+    border-radius: 6px;
+}
